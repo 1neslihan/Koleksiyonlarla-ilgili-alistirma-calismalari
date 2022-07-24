@@ -8,7 +8,7 @@ namespace Koleksiyonlar
             /*Klavyeden girilen 20 adet sayının en büyük 3 tanesi ve en küçük 3 tanesi bulan, her 
             iki grubun kendi içerisinde ortalamalarını alan ve bu ortalamaları ve ortalama toplamlarını console'a yazdıran program.*/
 
-            List<int> sayilar=new List<int>();
+            int[] sayilar=new int[20];
 
             Console.WriteLine("20 adet sayi giriniz: ");
 
@@ -34,7 +34,7 @@ namespace Koleksiyonlar
 
                         sayi=sayi_;
 
-                        sayilar.Add(sayi);
+                        sayilar[sayac-1]=sayi;
                         
                         sayac++;
                        
@@ -51,7 +51,7 @@ namespace Koleksiyonlar
 
             }
 
-            sayilar.Sort();
+            Array.Sort(sayilar);
 
             Console.WriteLine();
             Console.Write("En büyük sayilar: "+sayilar[17]+" "+sayilar[18]+" "+sayilar[19]);
